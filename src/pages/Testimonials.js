@@ -17,7 +17,7 @@ export default function Testimonials(){
                 <section className="testimonial-content">
                     <img src={require("../img/qoute.png")} alt="open qoute" /> 
                     <p className="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                    <p><strong>May AndersonsWorkcation</strong>, Workcation CTO</p>
+                    <p><strong>May Andersons</strong> Workcation, CTO</p>
                 </section>
             </section>
             <LinkedIcon to="/" />
