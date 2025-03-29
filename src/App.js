@@ -6,6 +6,8 @@ import Badges from './pages/Badges';
 import Banners from './pages/Banners';
 import Cards from './pages/Cards';
 import Testimonials from './pages/Testimonials';
+import Tooltip from './pages/Tooltip';
+import Toast from './pages/Toast';
 
 export const IconContext = React.createContext();
 
@@ -20,6 +22,8 @@ function App() {
             <Route path="/banners" element={<Banners />} />
             <Route path="/cards" element={<Cards />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/tooltip" element={<Tooltip />} />
+            <Route path="/toast" element={<Toast />} />
           </Routes>
         </BrowserRouter>
       </IconContext.Provider>
