@@ -1,38 +1,300 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.home{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    font-size: 2.4em;
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home > h1{
+    color: aliceblue;
+    text-shadow: 4px 1px 5px rgb(48, 0, 97);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.catalouge{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.catalouge-class{
+    padding: .2em 1em;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 1px 3px 10px rgb(48, 0, 97);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.catalouge-class:hover{
+    transform: scale(1.1);
+}
+
+.catalouge > .badges{
+    background-color: #a75ba5;
+}
+
+.catalouge > .banners{
+    background-color: #ffe284;
+}
+
+.catalouge > .cards{
+    background-color: #70a8e6;
+}
+
+.catalouge > .testimonials{
+    background-color: #f7a278;
+}
+
+.catalouge > .tooltip{
+    background-color: #ed64b6;
+}
+
+.catalouge > .toast{
+    background-color: #007e88;
+}
+
+.react-icons{
+    position: absolute;
+    top: 1em;
+    border: 1px solid black;
+    font-size: 2em;
+    padding: .3em;
+    color: violet;
+    border-radius: 50%;
+    left: 1em;
+}
+
+.react-icons:hover{
+    background-color: violet;
+    color: white;
+    border-color: white;
+}
+
+.badges{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.types{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-family: "Comic Neue", cursive;
+    color: #a75ba5;
+}
+
+.divider{
+    width: 1px;
+    height: 8em;
+    border: 1px solid black;
+    margin: 1em 0;
+}
+
+.badge{
+    width: 4.1rem;
+    background-color: #f7a278;
+    padding:0.4em 1em;
+}
+
+.square{
+    border-radius: 4px;
+}
+
+.pill{
+    border-radius: 12px;
+}
+
+.color-paletter{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid gainsboro;
+    padding: .5em;
+    border-radius: 23px;
+}
+
+.color-pick{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid ;
+}
+
+.color-pick:hover{
+    transform: scale(1.1);
+}
+
+.banners-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 1em;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6em;
+    margin-bottom: 1em;
+}
+
+.banner > h2{
+    width: 7em;
+}
+
+.banner-content{
+    width: 52em;
+    padding:0 1em;
+    font-size: 14px;
+}
+
+.success > .banner-content{
+    background-color: #ECFDF5;
+    color: #047857;
+}
+
+.warning > .banner-content{
+    background-color: #FFFBEB;
+    color: #92400E;
+}
+
+.error > .banner-content{
+    background-color: #FEF2F2;
+    color: #92400E;
+}
+
+.neutral > .banner-content{
+    background-color: #EFF6FF;
+    color: #1C51B9;
+}
+
+.banner-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner-header > img{
+    height: max-content;
+}
+
+.cards-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+.card-body{
+    width: 24em;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding:1em;
+    text-align: center;
+}
+
+.card-body> img{
+    width: min-content;
+    height: min-content;
+    position: relative;
+    transform: translateY(-50%);
+}
+.card-content{
+    font-size: 1.2em;
+    color: #6B7280;
+}
+
+.card-content > h2{
+    font-size: 1.5em;
+    color: #1F2937;
+}
+
+.card-body:hover{
+    box-shadow: 8px 8px 10px;
+}
+
+.testimonial-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.brand-page{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: #1F2937;
+}
+
+.brand-content{
+    text-align: center;
+}
+
+.quote{
+    font-size: 1.4em;
+    line-height: 36px;
+}
+span{
+    color: #6B7280;
+}
+.text-divider{
+    color: #2E59F3;
+    font-weight: 900;
+}
+
+.testimonial{
+    width: 100%;
+    display: flex;
+    background-color: #2545B8;
+    color: white;
+    height: 400px;
+    margin-top: 8em;
+}
+
+.testimonial > img{
+    position: absolute;
+    transform: translate(15%,-7%);
+}
+
+.testimonial-content{
+    width: 50%;
+    position: relative;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-content>img{
+    width: min-content;
+    height: min-content;
+}
+
+.review{
+    font-size: 1.8em;
 }
