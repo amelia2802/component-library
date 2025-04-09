@@ -1,11 +1,30 @@
 import React from "react";
 import LinkedIcon from "../components/LinkedIcon";
+import ToastPallete from "../components/ToastPalette";
 
 export default function Toast(){
+    const [selectedToast,setSelectedToast] = React.useState({
+        backgroundColor:'#ECFDF5',
+        color:'#047857',
+        icon: "/img/circle.png",
+        header: 'Success',
+        text: 'your work has been saved'
+    })
+
+    const handleToastSelect = (toast) =>{
+        setSelectedToast(toast)
+    }
     return(
-        <section className="cards-page">
-            
-            <img src="https://image.spreadshirtmedia.net/image-server/v1/products/T1459A840PA4459PT28D325906979W10000H10000/views/1,width=550,height=550,appearanceId=840,backgroundColor=F2F2F2/cute-beaver-construction-cartoon-work-in-progress-sticker.jpg" alt="wip" />
+        <section className="toast-page">
+            <h1>Toast Popups</h1>
+            <section className="toast-body" style={{backgroundColor:selectedToast.backgroundColor, color:selectedToast.color}}>
+                <div className="toast-header">
+                    <img src={selectedToast.icon} alt="Circle" />
+                    <h2>{selectedToast.header}</h2>
+                </div>
+                <p>{selectedToast.text}</p>
+            </section>
+            <ToastPallete selectToast={handleToastSelect} />
             <LinkedIcon to="/" />
         </section>
     )

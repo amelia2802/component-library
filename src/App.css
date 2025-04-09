@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 .home{
     position: relative;
     height: 100vh;
@@ -126,13 +127,16 @@ h1{
     border: 1px solid gainsboro;
     padding: .5em;
     border-radius: 23px;
+    justify-items: center;
 }
 
 .color-pick{
+    display: flex;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid ;
+    font-size: 0;
 }
 
 .color-pick:hover{
@@ -297,4 +301,108 @@ span{
 
 .review{
     font-size: 1.8em;
+}
+
+.author strong{
+    display: block;
+}
+
+.toast-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: gainsboro;
+}
+
+.toast-body{
+    width: 24em;
+    height: 4.8em;
+    padding:1em;
+    background-color: #ECFDF5;
+    text-transform: capitalize;
+    color: #047857;
+    border-radius: 8px;
+    line-height: 12px;
+}
+
+.toast-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tooltip-header > button{
+    font-size: 1.1em;
+}
+
+.tooltip-body{
+    width: 24em;
+    padding:0.5em 1em;
+    text-transform: capitalize;
+    border-radius: 8px;
+    line-height: 20px;
+    border: none;
+}
+
+.tooltip-body::before{
+    content: '';
+    position: relative;
+    bottom: -11em;
+    left: 10%;
+    transform: translateX(-50%);
+    border-width: 1.5em;
+    border-style: solid;
+    border-color: var(--tooltip-border-color) transparent transparent transparent;
+}
+
+.tooltip-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tooltip-header-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 540px) {
+
+    .brand-page{
+        width: 100%;
+    }
+
+    .brand-content{
+        text-align: start;
+        padding: 0 0.5em;
+    }
+
+    .text-divider{
+        display: block;
+        visibility: hidden;
+    }
+
+    .testimonial{
+        height: 100vh;
+    }
+
+    .testimonial > img{
+        width: 90%;
+        height: 12em;
+        transform: translate(10%,-30%);
+    }
+    
+    .testimonial-content{
+        width: 100%;
+        top: 1em;
+        left: 0;
+        padding: 0 0.5em;
+    }
 }
