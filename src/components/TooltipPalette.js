@@ -26,7 +26,6 @@ export default function TooltipPalette({isLight,selectColor}) {
                         className="color-pick"
                         style={{backgroundColor:color.backgroundColor,
                                 color:color.color,
-                                '--tooltip-border-color': color.backgroundColor
                         }}
                         onClick={() => selectColor(color)}
                     >

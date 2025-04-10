@@ -22,7 +22,13 @@ export default function Tooltip(){
                 <h1>Tooltip</h1>
                 <button onClick={toggle}>{isLight ? "☀️" : "🌑"}</button>
             </div>
-          <section className="tooltip-body" style={selectedColor}>
+          <section 
+            className="tooltip-body" 
+            style={{
+                ...selectedColor,
+                '--tooltip-border-color': selectedColor.backgroundColor
+                }}
+            >   
             <section className="tooltip-header">
                 <div className="tooltip-header-icon">
                     <MdOutlineInbox />
